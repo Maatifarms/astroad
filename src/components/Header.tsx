@@ -10,6 +10,7 @@ const Header = () => {
     { href: '#home', label: 'Home' },
     { href: '#about', label: 'About Guruji' },
     { href: '#services', label: 'Services' },
+    { href: '/pooja', label: 'पूजा सेवाएं' },
     { href: '#testimonials', label: 'Testimonials' },
     { href: '#contact', label: 'Contact' },
   ];
@@ -28,13 +29,23 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-            >
-              {item.label}
-            </a>
+            item.href.startsWith('/') ? (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+              >
+                {item.label}
+              </a>
+            )
           ))}
           <Button className="ml-4">Book Consultation</Button>
         </nav>

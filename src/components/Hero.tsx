@@ -20,7 +20,7 @@ const Hero = () => {
             Renowned Vedic Priest
           </h2>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            30+ Years of Sacred Service • 32,000+ Pujas Performed
+            10+ Years of Sacred Service • 10,000+ Pujas Performed
             <br />
             Trimbakeshwar, Nashik - The Sacred Jyotirlinga
           </p>
@@ -43,11 +43,11 @@ const Hero = () => {
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-3xl font-bold text-spiritual-gold">30+</h3>
+              <h3 className="text-3xl font-bold text-spiritual-gold">10+</h3>
               <p className="text-white/90">Years Experience</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-3xl font-bold text-spiritual-gold">32,000+</h3>
+              <h3 className="text-3xl font-bold text-spiritual-gold">10,000+</h3>
               <p className="text-white/90">Pujas Performed</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">

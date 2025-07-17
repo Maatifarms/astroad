@@ -90,7 +90,7 @@ const Testimonials = () => {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">32,000+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">10,000+</div>
                   <div className="text-muted-foreground">Pujas Performed</div>
                 </div>
                 <div>
@@ -98,7 +98,7 @@ const Testimonials = () => {
                   <div className="text-muted-foreground">Success Rate</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold text-primary mb-2">30+</div>
+                  <div className="text-3xl font-bold text-primary mb-2">10+</div>
                   <div className="text-muted-foreground">Years Experience</div>
                 </div>
               </div>

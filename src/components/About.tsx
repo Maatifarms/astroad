@@ -10,7 +10,7 @@ const About = () => {
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A distinguished Vedic scholar and priest with over three decades of dedicated service
+            A distinguished Vedic scholar and priest with over a decade of dedicated service
           </p>
         </div>
 
@@ -22,7 +22,7 @@ const About = () => {
                 <p className="text-muted-foreground">
                   Born into a traditional Brahmin family in Trimbakeshwar, Pandit Aditya Guruji has been 
                   immersed in Vedic traditions from childhood. His deep understanding of ancient scriptures 
-                  and rituals has been passed down through generations.
+                  and rituals has been cultivated over a decade of dedicated practice.
                 </p>
               </CardContent>
             </Card>
@@ -63,7 +63,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <span className="text-muted-foreground">30+ Years serving at Trimbakeshwar Temple</span>
+                  <span className="text-muted-foreground">10+ Years serving at Trimbakeshwar Temple</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
@@ -71,7 +71,7 @@ const About = () => {
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
-                  <span className="text-muted-foreground">Performed 32,000+ successful pujas and ceremonies</span>
+                  <span className="text-muted-foreground">Performed 10,000+ successful pujas and ceremonies</span>
                 </li>
                 <li className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full mt-2"></div>
