@@ -52,6 +52,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				spiritual: {
+					gold: 'hsl(var(--spiritual-gold))',
+					saffron: 'hsl(var(--spiritual-saffron))',
+					'deep-blue': 'hsl(var(--spiritual-deep-blue))',
+					cream: 'hsl(var(--spiritual-cream))',
+					earth: 'hsl(var(--spiritual-earth))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
