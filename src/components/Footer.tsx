@@ -48,7 +48,7 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <div className="space-y-2 text-sm">
-              <p className="text-white/70">Phone: +91 98765 43210</p>
+              <p className="text-white/70">Phone: +91 87078 80017</p>
               <p className="text-white/70">Email: panditadityaguruji@gmail.com</p>
               <p className="text-white/70">
                 Trimbakeshwar Temple<br />

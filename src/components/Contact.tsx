@@ -30,8 +30,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                     <p className="text-muted-foreground mb-2">For immediate consultation and booking</p>
-                    <a href="tel:+919876543210" className="text-primary font-medium hover:underline">
-                      +91 98765 43210
+                    <a href="tel:+918707880017" className="text-primary font-medium hover:underline">
+                      +91 87078 80017
                     </a>
                   </div>
                 </div>
@@ -45,7 +45,7 @@ const Contact = () => {
                     <p className="text-muted-foreground mb-2">Quick consultation and puja booking</p>
                     <Button 
                       className="bg-green-600 hover:bg-green-700"
-                      onClick={() => window.open('https://wa.me/919876543210?text=Namaste Guruji, I need puja consultation', '_blank')}
+                      onClick={() => window.open('https://wa.me/918707880017?text=Namaste Guruji, I need puja consultation', '_blank')}
                     >
                       Message on WhatsApp
                     </Button>
@@ -118,14 +118,14 @@ const Contact = () => {
                 <div className="space-y-4">
                   <Button 
                     className="w-full text-lg py-6 bg-primary hover:bg-primary/90"
-                    onClick={() => window.location.href = 'tel:+919876543210'}
+                    onClick={() => window.location.href = 'tel:+918707880017'}
                   >
-                    Call Now: +91 98765 43210
+                    Call Now: +91 87078 80017
                   </Button>
                   
                   <Button 
                     className="w-full text-lg py-6 bg-green-600 hover:bg-green-700"
-                    onClick={() => window.open('https://wa.me/919876543210?text=Namaste Guruji, I need puja consultation', '_blank')}
+                    onClick={() => window.open('https://wa.me/918707880017?text=Namaste Guruji, I need puja consultation', '_blank')}
                   >
                     WhatsApp Consultation
                   </Button>
