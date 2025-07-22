@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Link } from 'react-router-dom';
 import omSymbol from '@/assets/om-symbol.png';
 
 const Header = () => {
@@ -30,13 +31,13 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-6">
           {navItems.map((item) => (
             item.href.startsWith('/') ? (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors"
               >
                 {item.label}
-              </a>
+              </Link>
             ) : (
               <a
                 key={item.href}
@@ -60,14 +61,25 @@ const Header = () => {
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
             <div className="flex flex-col space-y-4 mt-8">
               {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
+                item.href.startsWith('/') ? (
+                  <Link
+                    key={item.href}
+                    to={item.href}
+                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
               <Button className="mt-6">Book Consultation</Button>
             </div>

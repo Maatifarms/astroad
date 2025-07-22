@@ -1,9 +1,13 @@
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import BookingForm from '@/components/BookingForm';
 
 const Pooja = () => {
+  const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState('');
   const poojaServices = [
     {
       title: "कालसर्प दोष पूजा",
@@ -84,18 +88,21 @@ const Pooja = () => {
                     {service.description}
                   </p>
                   
-                  <div className="flex justify-between items-center text-sm pt-4 border-t">
-                    <span className="text-primary font-medium">अवधि: {service.duration}</span>
-                  </div>
-                  
-                  <div className="pt-4">
-                    <Button 
-                      className="w-full"
-                      variant="outline"
-                    >
-                      इस पूजा की बुकिंग करें
-                    </Button>
-                  </div>
+                   <div className="flex justify-between items-center text-sm pt-4 border-t">
+                     <span className="text-primary font-medium">अवधि: {service.duration}</span>
+                   </div>
+                   
+                   <div className="pt-4">
+                     <Button 
+                       className="w-full bg-primary hover:bg-primary/90"
+                       onClick={() => {
+                         setSelectedService(service.title);
+                         setIsBookingFormOpen(true);
+                       }}
+                     >
+                       पूजा बुक करें
+                     </Button>
+                   </div>
                 </CardContent>
               </Card>
             ))}
@@ -137,28 +144,41 @@ const Pooja = () => {
                   </div>
                 </div>
 
-                <div className="mt-8 p-6 bg-spiritual-cream/30 rounded-lg">
-                  <h4 className="font-semibold mb-3 text-foreground">संपर्क के लिए:</h4>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button 
-                      className="bg-primary hover:bg-primary/90"
-                      onClick={() => window.location.href = 'tel:+919876543210'}
-                    >
-                      फोन: +91 98765 43210
-                    </Button>
-                    <Button 
-                      className="bg-green-600 hover:bg-green-700"
-                      onClick={() => window.open('https://wa.me/919876543210?text=नमस्ते गुरुजी, मुझे पूजा की जानकारी चाहिए', '_blank')}
-                    >
-                      व्हाट्सऐप पर संदेश भेजें
-                    </Button>
-                  </div>
-                </div>
+                 <div className="mt-8 p-6 bg-spiritual-cream/30 rounded-lg">
+                   <h4 className="font-semibold mb-3 text-foreground">संपर्क के लिए:</h4>
+                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                     <Button 
+                       className="bg-primary hover:bg-primary/90"
+                       onClick={() => setIsBookingFormOpen(true)}
+                     >
+                       पूजा बुक करें अभी
+                     </Button>
+                     <Button 
+                       className="bg-primary/90 hover:bg-primary"
+                       onClick={() => window.location.href = 'tel:+918707880017'}
+                     >
+                       फोन: +91 87078 80017
+                     </Button>
+                     <Button 
+                       className="bg-green-600 hover:bg-green-700"
+                       onClick={() => window.open('https://wa.me/918707880017?text=नमस्ते गुरुजी, मुझे पूजा की जानकारी चाहिए', '_blank')}
+                     >
+                       व्हाट्सऐप पर संदेश भेजें
+                     </Button>
+                   </div>
+                 </div>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
+      
+      <BookingForm 
+        isOpen={isBookingFormOpen} 
+        onClose={() => setIsBookingFormOpen(false)}
+        serviceName={selectedService}
+      />
+      
       <Footer />
     </div>
   );

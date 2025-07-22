@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import BookingForm from './BookingForm';
 
 const Contact = () => {
+  const [isBookingFormOpen, setIsBookingFormOpen] = useState(false);
   return (
     <section id="contact" className="py-20 bg-muted/30">
       <div className="container">
@@ -118,6 +121,13 @@ const Contact = () => {
                 <div className="space-y-4">
                   <Button 
                     className="w-full text-lg py-6 bg-primary hover:bg-primary/90"
+                    onClick={() => setIsBookingFormOpen(true)}
+                  >
+                    Book Puja Service
+                  </Button>
+                  
+                  <Button 
+                    className="w-full text-lg py-6 bg-primary/90 hover:bg-primary"
                     onClick={() => window.location.href = 'tel:+918707880017'}
                   >
                     Call Now: +91 87078 80017
@@ -167,6 +177,11 @@ const Contact = () => {
           </Card>
         </div>
       </div>
+      
+      <BookingForm 
+        isOpen={isBookingFormOpen} 
+        onClose={() => setIsBookingFormOpen(false)} 
+      />
     </section>
   );
 };
